@@ -82,7 +82,7 @@ interface RequestInterface extends MessageInterface
      * @return self
      * @throws \InvalidArgumentException for invalid HTTP methods.
      */
-    public function withMethod(string $method): this;
+    public function withMethod(?string $method): this;
 
     /**
      * Retrieves the URI instance.
@@ -125,5 +125,5 @@ interface RequestInterface extends MessageInterface
      * @param bool $preserveHost Preserve the original state of the Host header.
      * @return self
      */
-    public function withUri(UriInterface $uri, bool $preserveHost = false): this;
+    public function withUri(UriInterface $uri, ?bool $preserveHost = false): this;
 }

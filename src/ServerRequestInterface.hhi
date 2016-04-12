@@ -226,7 +226,7 @@ interface ServerRequestInterface extends RequestInterface
      * @param mixed $default Default value to return if the attribute does not exist.
      * @return mixed
      */
-    public function getAttribute(string $name, mixed $default = null): mixed;
+    public function getAttribute(?string $name, mixed $default = null): mixed;
 
     /**
      * Return an instance with the specified derived request attribute.
@@ -243,7 +243,7 @@ interface ServerRequestInterface extends RequestInterface
      * @param mixed $value The value of the attribute.
      * @return self
      */
-    public function withAttribute(string $name, mixed $value): this;
+    public function withAttribute(?string $name, mixed $value): this;
 
     /**
      * Return an instance that removes the specified derived request attribute.
@@ -259,5 +259,5 @@ interface ServerRequestInterface extends RequestInterface
      * @param string $name The attribute name.
      * @return self
      */
-    public function withoutAttribute(string $name): this;
+    public function withoutAttribute(?string $name): this;
 }
